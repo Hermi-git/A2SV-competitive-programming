@@ -9,6 +9,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0387-first-unique-character-in-a-string](https://github.com/Hermi-git/A2SV-competitive-programming/tree/master/0387-first-unique-character-in-a-string) |
+| [0412-fizz-buzz](https://github.com/Hermi-git/A2SV-competitive-programming/tree/master/0412-fizz-buzz) |
 ## Queue
 |  |
 | ------- |
@@ -17,4 +18,12 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0387-first-unique-character-in-a-string](https://github.com/Hermi-git/A2SV-competitive-programming/tree/master/0387-first-unique-character-in-a-string) |
+## Math
+|  |
+| ------- |
+| [0412-fizz-buzz](https://github.com/Hermi-git/A2SV-competitive-programming/tree/master/0412-fizz-buzz) |
+## Simulation
+|  |
+| ------- |
+| [0412-fizz-buzz](https://github.com/Hermi-git/A2SV-competitive-programming/tree/master/0412-fizz-buzz) |
 <!---LeetCode Topics End-->
