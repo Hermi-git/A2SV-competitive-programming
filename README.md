@@ -4,6 +4,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Hash Table
 |  |
 | ------- |
+| [0036-valid-sudoku](https://github.com/Hermi-git/A2SV-competitive-programming/tree/master/0036-valid-sudoku) |
 | [0387-first-unique-character-in-a-string](https://github.com/Hermi-git/A2SV-competitive-programming/tree/master/0387-first-unique-character-in-a-string) |
 ## String
 |  |
@@ -36,6 +37,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Array
 |  |
 | ------- |
+| [0036-valid-sudoku](https://github.com/Hermi-git/A2SV-competitive-programming/tree/master/0036-valid-sudoku) |
 | [0066-plus-one](https://github.com/Hermi-git/A2SV-competitive-programming/tree/master/0066-plus-one) |
 | [1651-shuffle-string](https://github.com/Hermi-git/A2SV-competitive-programming/tree/master/1651-shuffle-string) |
 ## Number Theory
@@ -46,4 +48,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0014-longest-common-prefix](https://github.com/Hermi-git/A2SV-competitive-programming/tree/master/0014-longest-common-prefix) |
+## Matrix
+|  |
+| ------- |
+| [0036-valid-sudoku](https://github.com/Hermi-git/A2SV-competitive-programming/tree/master/0036-valid-sudoku) |
 <!---LeetCode Topics End-->
