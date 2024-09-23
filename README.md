@@ -38,6 +38,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0026-remove-duplicates-from-sorted-array](https://github.com/Hermi-git/A2SV-competitive-programming/tree/master/0026-remove-duplicates-from-sorted-array) |
+| [0027-remove-element](https://github.com/Hermi-git/A2SV-competitive-programming/tree/master/0027-remove-element) |
 | [0036-valid-sudoku](https://github.com/Hermi-git/A2SV-competitive-programming/tree/master/0036-valid-sudoku) |
 | [0066-plus-one](https://github.com/Hermi-git/A2SV-competitive-programming/tree/master/0066-plus-one) |
 | [1651-shuffle-string](https://github.com/Hermi-git/A2SV-competitive-programming/tree/master/1651-shuffle-string) |
@@ -57,4 +58,5 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0026-remove-duplicates-from-sorted-array](https://github.com/Hermi-git/A2SV-competitive-programming/tree/master/0026-remove-duplicates-from-sorted-array) |
+| [0027-remove-element](https://github.com/Hermi-git/A2SV-competitive-programming/tree/master/0027-remove-element) |
 <!---LeetCode Topics End-->
