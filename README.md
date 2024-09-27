@@ -11,6 +11,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0014-longest-common-prefix](https://github.com/Hermi-git/A2SV-competitive-programming/tree/master/0014-longest-common-prefix) |
 | [0028-find-the-index-of-the-first-occurrence-in-a-string](https://github.com/Hermi-git/A2SV-competitive-programming/tree/master/0028-find-the-index-of-the-first-occurrence-in-a-string) |
+| [0125-valid-palindrome](https://github.com/Hermi-git/A2SV-competitive-programming/tree/master/0125-valid-palindrome) |
 | [0387-first-unique-character-in-a-string](https://github.com/Hermi-git/A2SV-competitive-programming/tree/master/0387-first-unique-character-in-a-string) |
 | [0412-fizz-buzz](https://github.com/Hermi-git/A2SV-competitive-programming/tree/master/0412-fizz-buzz) |
 | [1651-shuffle-string](https://github.com/Hermi-git/A2SV-competitive-programming/tree/master/1651-shuffle-string) |
@@ -61,6 +62,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0026-remove-duplicates-from-sorted-array](https://github.com/Hermi-git/A2SV-competitive-programming/tree/master/0026-remove-duplicates-from-sorted-array) |
 | [0027-remove-element](https://github.com/Hermi-git/A2SV-competitive-programming/tree/master/0027-remove-element) |
 | [0028-find-the-index-of-the-first-occurrence-in-a-string](https://github.com/Hermi-git/A2SV-competitive-programming/tree/master/0028-find-the-index-of-the-first-occurrence-in-a-string) |
+| [0125-valid-palindrome](https://github.com/Hermi-git/A2SV-competitive-programming/tree/master/0125-valid-palindrome) |
 ## String Matching
 |  |
 | ------- |
