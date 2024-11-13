@@ -3,13 +3,9 @@ class Solution:
         """
         Do not return anything, modify nums in-place instead.
         """
-        l = 0
-        for r in range(len(nums)):
-            if nums[r] != 0:
-                nums[l] = nums[r]
-                l += 1
-        while l < len(nums):
-            nums[l] = 0
-            l += 1
-        return nums
-                
+        write, read = 0, 0
+        while read < len(nums):
+            if nums[read] != 0:
+                nums[write], nums[read] = nums[read], nums[write]
+                write += 1
+            read += 1
