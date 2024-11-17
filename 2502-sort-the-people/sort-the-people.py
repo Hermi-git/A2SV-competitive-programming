@@ -1,9 +1,16 @@
 class Solution:
     def sortPeople(self, names: List[str], heights: List[int]) -> List[str]:
         n = len(heights)
-        for i in range(n):
-            for j in range(n-i-1):
-                if heights[j] < heights[j+1]:
-                    heights[j], heights[j+1] = heights[j+1], heights[j]
-                    names[j], names[j+1] = names[j+1], names[j]
-        return names
+        people = [(names[i], heights[i]) for i in range(n)]
+
+        for i in range(1, n):
+            current_name, current_height = people[i]
+            j = i - 1
+            while j >= 0 and people[j][1] < current_height:  
+                people[j + 1] = people[j]  
+                j -= 1
+            people[j + 1] = (current_name, current_height)  
+        
+        sorted_names = [person[0] for person in people]
+        return sorted_names
+            
