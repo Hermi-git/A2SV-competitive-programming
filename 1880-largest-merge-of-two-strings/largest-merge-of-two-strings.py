@@ -9,10 +9,6 @@ class Solution:
             else:
                 merge.append(word2[j])
                 j += 1
-        while i < len(word1):
-            merge.append(word1[i])
-            i += 1
-        while j < len(word2):
-            merge.append(word2[j])
-            j += 1
+        merge.append(word1[i:])
+        merge.append(word2[j:])
         return ''.join(merge)
