@@ -8,8 +8,6 @@ class Solution:
                 min_len = min(min_len, r -l + 1)
                 summ -= nums[l]
                 l += 1
-        if min_len == 10 **6:
-            return 0
-        return min_len
+        return 0 if min_len == 10**6 else min_len
 
 
