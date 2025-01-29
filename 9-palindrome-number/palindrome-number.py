@@ -1,12 +1,6 @@
 class Solution:
     def isPalindrome(self, x: int) -> bool:
-        xs = str(x)
-        x_rev = xs[::-1]
-        if xs != x_rev:
-            return False
-        return True
-        
-        
-        
-        
-        
+        x_str = str(x)
+        if x_str == x_str[: : -1]:
+            return True
+        return False
