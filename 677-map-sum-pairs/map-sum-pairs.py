@@ -26,6 +26,7 @@ class MapSum:
             if curr.children[index] is None:
                 return 0
             curr = curr.children[index]
+        @cache
         def dfs(node):
             nonlocal result
             if not node:
