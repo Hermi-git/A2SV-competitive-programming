@@ -6,10 +6,10 @@ class Solution:
         ans = []
         
         def backtrack(i, dots, ip):
-            remaining = n - i
-            segments_left = 4 - dots
-            if remaining < segments_left or remaining > 3 * segments_left:
-                return
+            # remaining = n - i
+            # segments_left = 4 - dots
+            # if remaining < segments_left or remaining > 3 * segments_left:
+            #     return
             if dots == 4:
                 if i == n:
                     ans.append(ip[:-1])  
