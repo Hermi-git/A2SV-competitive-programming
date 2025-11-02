@@ -6,23 +6,19 @@ class Solution:
             graph[v].append((u,w))
     
         def dijkstra(start_node):
-            distances = {node: float('inf') for node in graph}
+            dists = {node: float('inf') for node in graph}
             count=-1
-            distances[start_node] = 0
-            processed = set()
-
+            dists[start_node] = 0
+            
             heap = [(0, start_node)]
             while heap:
                 current_distance, current_node = heapq.heappop(heap)
-                if current_node in processed:
-                    continue
-                processed.add(current_node)
                 for child, weight in graph[current_node]: 
                     distance = current_distance + weight
-                    if distance < distances[child]:
-                        distances[child] = distance
+                    if distance < dists[child]:
+                        dists[child] = distance
                         heapq.heappush(heap, (distance, child))
-            for d in distances.values():
+            for d in dists.values():
                 if d<=distanceThreshold:
                     count+=1
             return count
