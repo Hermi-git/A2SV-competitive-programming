@@ -12,10 +12,7 @@ class Solution:
                 base = multiply(base, base, mod)
                 exponent >>= 1
             return result
-        if n < 0:
-            x = 1 / x       
-            n = -n 
-        
+            
         even = n - (n//2)
         odd = n//2
 
