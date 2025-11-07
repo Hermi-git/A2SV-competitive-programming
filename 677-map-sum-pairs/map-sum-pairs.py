@@ -26,21 +26,21 @@ class MapSum:
             if curr.children[index] is None:
                 return 0
             curr = curr.children[index]
-        @cache
+        
         def dfs(node):
-            nonlocal result
+            nonlocal res
             if not node:
                 return 0
             if node.is_end:
-                result= node.value
+                res= node.value
             else:
-                result=0
+                res=0
             
             for child in node.children:
-                result += dfs(child)
-            return result
+                res += dfs(child)
+            return res
 
-        result = 0
+        res = 0
         return dfs(curr)
 
 # Your MapSum object will be instantiated and called as such:
