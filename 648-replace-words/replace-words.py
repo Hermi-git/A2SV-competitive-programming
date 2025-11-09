@@ -6,23 +6,23 @@ class Solution:
         sent = sentence.split(" ")
         trie = Trie()
         def insert(trie, word):
-            node = trie
+            curr = trie
             for ch in word:
-                node = node[ch]
-            node["end"] = True
+                curr = curr[ch]
+            curr["end"] = True
 
         for word in dictionary:
             insert(trie, word)
 
         def search_root(trie, word):
-            node = trie
+            curr = trie
             prefix = ""
             for ch in word:
-                if ch not in node:
+                if ch not in curr:
                     break
-                node = node[ch]
+                curr = curr[ch]
                 prefix += ch
-                if "end" in node: 
+                if "end" in curr: 
                     return prefix
             return word  
 
