@@ -1,6 +1,5 @@
 class Solution:
     def numberOfBeams(self, bank: List[str]) -> int:
-        laser = 0
         devices = []
         for row in bank:
             if all(s == "0" for s in row):
@@ -10,7 +9,7 @@ class Solution:
             devices.append(row_sum)
         if len(devices) == 1:
             return 0
-        res = 0
+        laser = 0
         for i in range(len(devices)-1):
-            res += devices[i] * devices[i+1]
-        return res
+            laser += devices[i] * devices[i+1]
+        return laser
