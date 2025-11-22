@@ -5,31 +5,31 @@ class Solution:
             graph[u].append((v,w))
             graph[v].append((u,w))
     
-        def dijkstra(start_node):
-            dists = {node: float('inf') for node in graph}
-            count=-1
-            dists[start_node] = 0
+        def dijkstra(start):
+            dist = {node: float('inf') for node in graph}
+            cnt=-1
+            dist[start] = 0
             
-            heap = [(0, start_node)]
+            heap = [(0, start)]
             while heap:
                 current_distance, current_node = heapq.heappop(heap)
                 for child, weight in graph[current_node]: 
                     distance = current_distance + weight
-                    if distance < dists[child]:
-                        dists[child] = distance
+                    if distance < dist[child]:
+                        dist[child] = distance
                         heapq.heappush(heap, (distance, child))
-            for d in dists.values():
+            for d in dist.values():
                 if d<=distanceThreshold:
-                    count+=1
-            return count
+                    cnt+=1
+            return cnt
             
-        count_nodes=[0]*(n)
+        cnt_nodes=[0]*(n)
         for i in range(n):
-            count_nodes[i]=dijkstra(i)
+            cnt_nodes[i]=dijkstra(i)
         ans=float("inf")
-        res=None
+        result=None
         for i in range(n):
-            if count_nodes[i]<=ans:
-                ans=count_nodes[i]
-                res=i
-        return res
+            if cnt_nodes[i]<=ans:
+                ans=cnt_nodes[i]
+                result=i
+        return result
