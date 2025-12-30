@@ -1,11 +1,10 @@
 class Solution:
     def multiply(self, num1: str, num2: str) -> str:
-        n1, n2 = 0, 0
-        for num in num1:
-            n1 = n1 * 10 + (ord(num) - ord('0'))
-        for num in num2:
-            n2 = n2 *10 + (ord(num)- ord('0'))
-        
-        ans = n1 * n2
-        return f"{ans}"
+        res1, res2 = 0, 0
+        for i in num1:
+            res1 = res1 * 10 + (ord(i) - ord("0")) 
+        for i in num2:
+            res2 = res2 * 10 + (ord(i) - ord("0")) 
+
+        return str(res1 * res2)
         
