@@ -8,14 +8,11 @@ class Solution:
     def hasPathSum(self, root: Optional[TreeNode], targetSum: int) -> bool:
         if not root:
             return False
-        q = deque([(root, root.val)])
-
-        while q:
-            node, summ = q.popleft()
-            if not node.left and not node.right:
-                if summ == targetSum:
-                    return True
-            
-            if node.left: q.append((node.left, summ + node.left.val))
-            if node.right: q.append((node.right, summ + node.right.val))
-        return False
+        
+        if not root.left and not root.right:
+            return targetSum == root.val
+        
+        return (
+            self.hasPathSum(root.left, targetSum - root.val) or
+            self.hasPathSum(root.right, targetSum - root.val)
+        )
