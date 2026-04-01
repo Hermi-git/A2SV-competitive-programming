@@ -9,10 +9,11 @@ class Solution:
         def search(node):
             if not node:
                 return None
-            if node.val == val:
+            if val == node.val:
                 return node
-            elif node.val > val:
-                return search(node.left)
-            elif node.val < val:
+            if val < node.val:
+                return search(node.left) 
+            if val > node.val:
                 return search(node.right)
         return search(root)
+            
