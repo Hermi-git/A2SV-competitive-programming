@@ -1,14 +1,13 @@
 class Solution:
     def subsets(self, nums: List[int]) -> List[List[int]]:
-        subset = []
-        def backtrack(idx, path):
-            subset.append(path[:])
-            for i in range(idx, len(nums)):
-                path.append(nums[i])
-                backtrack(i + 1, path)
-                path.pop()
-            return
-        backtrack(0, [])
-        return subset
+        answer = []
+        def backtrack(start, path):
+            answer.append(path[:])
 
-       
+            for cand in range(start, len(nums)):
+                if start != len(nums):
+                    path.append(nums[cand])
+                    backtrack(cand+1, path)
+                    path.pop()
+        backtrack(0, [])
+        return answer
