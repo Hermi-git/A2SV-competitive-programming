@@ -3,9 +3,10 @@ class Solution:
         nums.sort()
         answer = []
         def backtrack(start, path):
-            if path not in answer:
-                answer.append(path[:])
+            answer.append(path[:])
             for i in range(start, len(nums)):
+                if i > start and nums[i] == nums[i-1]:
+                    continue
                 path.append(nums[i])
                 backtrack(i+1, path)
                 path.pop()
