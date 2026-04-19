@@ -6,7 +6,6 @@ class Solution:
                 answer.append(path[:])
                 return
             if remaining < 0:
-                remaining = target
                 return
             for i in range(start, len(candidates)):
                 path.append(candidates[i])
