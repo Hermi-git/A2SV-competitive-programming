@@ -13,13 +13,12 @@ class Solution:
                     graph[j].append(i)
         
         def dfs(node, visited):
-            ans = 1
             visited.add(node)
             for neigh in graph[node]:
                 if neigh not in visited:
                     visited.add(neigh)
-                    ans += dfs(neigh, visited)
-            return ans
+                    dfs(neigh, visited)
+            return len(visited)
         
         max_bomb = 0
         for node in range(nodes):
