@@ -13,14 +13,13 @@ class Solution:
                     q.append((r, c))
                     distance[r][c] = 0
         while q:
-            for _ in range(len(q)):
-                r, c = q.popleft()
-                for dr, dc in direction:
-                    nr = r + dr
-                    nc = c + dc
-                    if inbound(nr, nc) and distance[nr][nc] == -1:
-                        q.append((nr, nc))
-                        distance[nr][nc] = distance[r][c] + 1
+            r, c = q.popleft()
+            for dr, dc in direction:
+                nr = r + dr
+                nc = c + dc
+                if inbound(nr, nc) and distance[nr][nc] == -1:
+                    q.append((nr, nc))
+                    distance[nr][nc] = distance[r][c] + 1
         return distance
             
 
