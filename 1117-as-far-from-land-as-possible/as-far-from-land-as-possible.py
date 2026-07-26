@@ -12,6 +12,8 @@ class Solution:
                 if grid[r][c] == 1:
                     q.append((r, c))
                     distance[r][c] = 0
+        if not q or len(q) == n * n:
+            return -1
         max_dist = float('-inf')
         while q:
             r, c = q.popleft()
