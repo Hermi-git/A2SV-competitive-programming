@@ -7,8 +7,7 @@
 
 class Solution:
     def distanceK(self, root: TreeNode, target: TreeNode, k: int) -> List[int]:
-        parent = {}
-        parent[root] = None
+        parent = {root:None}
         def dfs(node):
             if node:
                 if node.left:
@@ -20,21 +19,15 @@ class Solution:
         dfs(root)    
         nodes = []
         q = deque([(target, 0)])
-        visited = set([(target)])
+        visited = {target}
         while q:
             node, distance = q.popleft()
-            if not node:
-                continue
             if distance == k:
                 nodes.append(node.val)
-            if node.left and node.left not in visited: 
-                q.append((node.left, distance +1))
-                visited.add((node.left))
-            if node.right and node.right not in visited: 
-                q.append((node.right, distance +1))
-                visited.add(node.right)
-            if parent[node] and parent[node] not in visited: 
-                q.append((parent[node], distance +1))
-                visited.add(parent[node])
+                continue
+            for neigh in (node.left, node.right, parent[node]):
+                if neigh and neigh not in visited:
+                    visited.add(neigh)
+                    q.append((neigh, distance + 1))
         return nodes
 
