@@ -7,33 +7,34 @@
 
 class Solution:
     def distanceK(self, root: TreeNode, target: TreeNode, k: int) -> List[int]:
-        graph = defaultdict(list)
-        def build_graph(node):
+        parent = {}
+        parent[root] = None
+        def dfs(node):
+            if node:
+                if node.left:
+                    parent[node.left] = node
+                    dfs(node.left)
+                if node.right:
+                    parent[node.right] = node
+                    dfs(node.right)
+        dfs(root)    
+        nodes = []
+        q = deque([(target, 0)])
+        visited = set([(target)])
+        while q:
+            node, distance = q.popleft()
             if not node:
-                return None
-            if node.left:
-                graph[node.val].append(node.left.val)
-                graph[node.left.val].append(node.val)
-                build_graph(node.left)
-            if node.right:
-                graph[node.val].append(node.right.val)
-                graph[node.right.val].append(node.val)
-                build_graph(node.right)
-        build_graph(root) 
-        print(graph)
-        answer = []
-        queue = deque([(target.val, 0)])
-        visited = set([target.val])
-        while queue:
-            node, distance = queue.popleft()
+                continue
             if distance == k:
-                answer.append(node)
-            if distance < k:
-                for neigh in graph[node]:
-                    if neigh not in visited:
-                        visited.add(neigh)
-                        queue.append((neigh, distance + 1))
-
-        return answer
-
+                nodes.append(node.val)
+            if node.left and node.left not in visited: 
+                q.append((node.left, distance +1))
+                visited.add((node.left))
+            if node.right and node.right not in visited: 
+                q.append((node.right, distance +1))
+                visited.add(node.right)
+            if parent[node] and parent[node] not in visited: 
+                q.append((parent[node], distance +1))
+                visited.add(parent[node])
+        return nodes
 
