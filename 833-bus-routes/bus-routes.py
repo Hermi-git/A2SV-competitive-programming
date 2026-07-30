@@ -3,10 +3,9 @@ class Solution:
         if source == target:
             return 0
         stop_to_buses = defaultdict(list)
-        for i in range(len(routes)):
-            for j in range(len(routes[i])):
-                val = routes[i][j]
-                stop_to_buses[val].append(i)
+        for bus, route in enumerate(routes):
+            for stop in route:
+                stop_to_buses[stop].append(bus)
         starts = stop_to_buses[source]
         q = deque()
         visited = set()
